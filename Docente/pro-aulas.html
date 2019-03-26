@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+	<title>SGI HIC LOS COCHES</title>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<link rel="stylesheet" href="../css/main.css">
+
+</head>
+
+<body id="pro-aulas.html">
+
+	<!-- SideBar -->
+
+	<section class="full-box cover dashboard-sideBar">
+
+		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard"></div>
+
+		<div class="full-box dashboard-sideBar-ct">
+
+			<!--SideBar Title -->
+
+			<div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
+
+				SGI HIC LOS COCHES <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
+
+			</div>
+
+			<!-- SideBar User info -->
+
+			<div class="full-box dashboard-sideBar-UserInfo">
+
+				<figure class="full-box">
+
+					<img src="../assets/img/avatar.jpg" alt="UserIcon">
+
+					<figcaption class="text-center text-titles"></figcaption>
+
+				</figure>
+
+				<ul class="full-box list-unstyled text-center">
+
+					<li>
+
+						<a href="#!">
+
+							<i class="zmdi zmdi-settings"></i>
+
+						</a>
+
+					</li>
+
+					<li>
+
+						<a href="#!" class="btn-exit-system">
+
+							<i class="zmdi zmdi-power"></i>
+
+						</a>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+			<!-- SideBar Menu -->
+
+			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
+
+				<li>
+
+					<a href="home.html">
+
+						<i class="zmdi zmdi-home zmdi-hc-fw"></i> Inicio
+
+					</a>
+
+				</li>
+
+				<li>
+
+					<a href="#!" class="btn-sideBar-SubMenu">
+
+						<i class="zmdi zmdi-mood"></i> Administracion Aulas <i class="zmdi zmdi-caret-down pull-right"></i>
+
+					</a>
+
+					<ul class="list-unstyled full-box">
+
+						<li>
+
+							<a id="aulas" href="aulas.html"><i class="zmdi zmdi-library"></i> Mis Aulas</a>
+
+						</li>
+
+						
+
+						<li id="nuevosproyectos">
+
+							<a id="new-pro-aulas" href="pro-aulas.html"><i class="zmdi zmdi-assignment"></i> Nuevo Proyecto de Aula</a>
+
+						</li>
+
+						
+
+						<li id="proyectos">
+
+							<a class="Aproyectos" id="pro-aulas" href="pro-aulas.html"><i class="zmdi zmdi-assignment"></i> Mis Proyectos de Aula</a>
+
+						</li>
+
+						
+
+						<!--<li>
+
+							<a id="beneficiarios" href=""><i class="zmdi zmdi-mood"></i> Beneficiarios a Cargo</a>
+
+						</li>-->
+
+						
+
+						
+
+					</ul>
+
+				</li>
+
+			</ul>
+
+		</div>
+
+	</section>
+
+	
+
+	
+
+	<!-- Content page-->
+
+	<section class="full-box dashboard-contentPage">
+
+		<!-- NavBar -->
+
+		<nav class="full-box dashboard-Navbar">
+
+			<ul class="full-box list-unstyled text-right">
+
+				<li class="pull-left">
+
+					<a href="#!" class="btn-menu-dashboard"><i class="zmdi zmdi-more-vert"></i></a>
+
+				</li>
+
+				<li><!-- aqui se va a enlazar el manual del usuario -->
+
+					<a href="#!" class="btn-modal-help">
+
+						<i class="zmdi zmdi-help-outline"></i>
+
+					</a>
+
+				</li>
+
+			</ul>
+
+		</nav>
+
+		<!-- Content page -->
+
+		<div class="container-fluid">
+
+			<div class="page-header">
+
+				<div class="row">
+
+					<div class="col-lg-4 col-md-4 col-sm-4">
+
+						<img src="../assets/img/logotipo-oficial-unicartagena.png" style="width: 75%">
+
+					</div>
+
+				<div class="col-lg-8 col-md-8 col-sm-8">
+
+					<h1 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Docente </h1>
+
+				</div>
+
+			</div>
+
+			</div>
+
+			<p class="lead">En esta página se puede gestionar la información educativa de los beneficiarios del hogar infantil, además de registrar propuestas de proyectos de aula o revisar los aprobados. Para mayor información presiona el botón de ayuda 
+
+				<i class="zmdi zmdi-help-outline"></i> en la parte superior de la pantalla</p>
+
+		</div>
+
+		<div class="container-fluid">
+
+			<div class="row">
+
+				<div class="col-xs-12">
+
+					<ul class="nav nav-tabs" style="margin-bottom: 15px;">
+
+					  	<li id="liNew" class="active"><a href="#new" data-toggle="tab">Registrar Propuesta</a></li>
+
+					  	<li id="liList"><a href="#list" data-toggle="tab">Listar Todos Mis Proyectos de Aula</a></li>
+
+					</ul>
+
+					<div id="myTabContent" class="tab-content">
+
+						<div class="tab-pane fade active in" id="new">
+
+							<div class="container-fluid">
+
+								<div class="row">
+
+									<div class="col-xs-12 col-md-10 col-md-offset-1">
+
+									    <form id="registro_ProAula">
+
+									        <h2 class="text-titles text-center">Formulario para registro de un proyecto de aula, ¡Todos los campos son requeridos!</h2>
+
+											<br>
+
+									    	<div class="form-group label-floating">
+
+											  <label class="control-label">Nombre del Proyecto</label>
+
+											  <input maxlength="400" class="form-control" type="text" id="nombreProyecto" required>
+
+											</div>
+
+											<div class="form-group">
+
+										        <label class="form-group">Aula de Aplicación</label>
+
+										        <select class="form-control" id="aula" required>
+
+										          <option disabled selected value="">Seleccione Una</option>
+
+												  <!--aqui se llena dinamicamente las aulas de ese docente -->
+
+										        </select>
+
+										    </div>
+
+											<div class="form-group">
+
+											  <label class="form-group">Fecha de Inicio</label>
+
+											  <input class="form-control" type="date" id="fechaI" min="0D" required>
+
+											</div>
+
+											<div class="form-group">
+
+											  <label class="form-group">Fecha de Finalización</label>
+
+											  <input class="form-control" type="date" id="fechaF" required>
+
+											</div>
+
+											<div class="form-group label-floating">
+
+											  <label class="control-label">Justificación</label>
+
+											  <textarea maxlength="6000" class="form-control" id="justificacion" rows="3" required></textarea>
+
+											</div>
+
+											<div class="form-group label-floating">
+
+											  <label class="control-label">Metodología</label>
+
+											  <textarea maxlength="6000" class="form-control" id="metodologia" rows="3" required></textarea>
+
+											</div>
+
+											<div class="form-group">
+
+											<label class="form-group">Indicadores de Logros</label>
+
+											<div>
+
+											  <center><label class="form-group">Dimensión Artística</label></center>
+
+											  <div class="form-group label-floating">
+
+											  <label class="control-label">Nombre indicador de logro</label>
+
+											  <input maxlength="100" class="form-control" type="text" id="nombre1" required>
+
+											  </div>
+
+											  <div class="form-group label-floating">
+
+											  <label class="control-label">Descripción</label>
+
+											  <textarea maxlength="6000" class="form-control" id="descripcion1" rows="3" required></textarea>
+
+											  </div>
+
+											</div>
+
+											
+
+											<div>
+
+											  <center><label class="form-group">Dimensión Cognitiva</label></center>
+
+											  <div class="form-group label-floating">
+
+											  <label class="control-label">Nombre indicador de logro</label>
+
+											  <input maxlength="100" class="form-control" type="text" id="nombre2" required>
+
+											  </div>
+
+											  <div class="form-group label-floating">
+
+											  <label class="control-label">Descripción</label>
+
+											  <textarea maxlength="6000" class="form-control" id="descripcion2" rows="3" required></textarea>
+
+											  </div>
+
+											</div>
+
+											
+
+											<div>
+
+											  <center><label class="form-group">Dimensión Comunicativa</label></center>
+
+											  <div class="form-group label-floating">
+
+											  <label class="control-label">Nombre indicador de logro</label>
+
+											  <input maxlength="100" class="form-control" type="text" id="nombre3" required>
+
+											  </div>
+
+											  <div class="form-group label-floating">
+
+											  <label class="control-label">Descripción</label>
+
+											  <textarea maxlength="6000" class="form-control" id="descripcion3" rows="3" required></textarea>
+
+											  </div>
+
+											</div>
+
+											
+
+											<div>
+
+											  <center><label class="form-group">Dimensión Corporal</label></center>
+
+											  <div class="form-group label-floating">
+
+											  <label class="control-label">Nombre indicador de logro</label>
+
+											  <input maxlength="100" class="form-control" type="text" id="nombre4" required>
+
+											  </div>
+
+											  <div class="form-group label-floating">
+
+											  <label class="control-label">Descripción</label>
+
+											  <textarea maxlength="6000" class="form-control" id="descripcion4" rows="3" required></textarea>
+
+											  </div>
+
+											</div>
+
+											
+
+											<div>
+
+											  <center><label class="form-group">Dimensión Personal-Social</label></center>
+
+											  <div class="form-group label-floating">
+
+											  <label class="control-label">Nombre indicador de logro</label>
+
+											  <input maxlength="100" class="form-control" type="text" id="nombre5" required>
+
+											  </div>
+
+											  <div class="form-group label-floating">
+
+											  <label class="control-label">Descripción</label>
+
+											  <textarea maxlength="6000" class="form-control" id="descripcion5" rows="3" required></textarea>
+
+											  </div>
+
+											</div>
+
+											</div><!-- fin de los indicadores -->
+
+											<div class="form-group" id="cronograma">
+
+												<label class="group-control">Cronograma de Actividades</label>
+
+											
+
+											<div class="table-responsive">
+
+												<table class="table table-hover text-center" id="tablaActividades">
+
+													<thead>
+
+													<tr>
+
+														<th class="text-center">Aspecto de la Vida</th>
+
+														<th class="text-center">Actividad Central</th>
+
+														<th class="text-center">Dimensiones</th>
+
+														<th class="text-center">Fecha Programada</th>
+
+														<th class="text-center">Recursos</th>
+
+													</tr>
+
+													</thead>
+
+													<tbody id = "tbodyActividades">
+
+														<tr class="otrasfilas" id="1">
+
+														<td>
+
+															<div class="form-group"><textarea maxlength="400" class="form-control" id="aspecto1" rows="3" required></textarea></div>
+
+														</td>
+
+														<td>
+
+															<div class="form-group"><textarea maxlength="6000" class="form-control" id="actividadcentral1" rows="3" required></textarea></div>
+
+														</td>
+
+														<td>
+
+															<div class="form-group"><textarea maxlength="400" class="form-control" id="dimensiones1" rows="3" required></textarea></div>
+
+														</td>
+
+														<td><br><br>
+
+															<div class="form-group"><input class="fechap form-control" type="date" id="fechaP1" required></div>
+
+														</td>
+
+														<td>
+
+															<div class="form-group"><textarea maxlength="6000" class="form-control" id="recursos1" rows="3" required></textarea></div>
+
+														</td>
+
+														</tr>
+
+													</tbody>
+
+												</table>
+
+											</div>
+
+											<div class="form-group">
+
+												<input type="button" id="agregarAct" class="btn btn-success btn-raised btn-sm" value="Agregar otra actividad"></input>
+
+											</div>
+
+											</div><!--Termina la tabla de actividades-->
+
+											<div class="form-group label-floating">
+
+											  <label class="control-label">Marco Teórico</label>
+
+											  <textarea maxlength="6000" class="form-control" id="marco-teorico" rows="3" required></textarea>
+
+											</div>
+
+											
+
+										    <center><input type="submit" class="btn btn-success btn-raised btn-sm" value="Registrar"></input></center> 
+
+									    </form>
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					  	<div class="tab-pane fade" id="list">
+
+							<div class="container-fluid"><!--Espacio para listar los proyectos de aula-->
+
+			<div class="page-header">
+
+			  <h2 class="text-titles">Mis Proyectos de Aula</h1>
+
+			</div>
+
+			<section id="cd-timeline" class="cd-container">
+
+			
+
+                <!-- aqui se escribe dinamicamente los proyectos de aula -->
+
+                
+
+            </section>
+
+
+
+
+
+		</div>
+
+							
+
+					  	</div>
+
+					</div>
+
+			</div>
+
+		</div>
+
+		
+
+		<br><center><div class="form-group">
+
+												<a href="home.html"><input type="button" id="regresohome"class="btn btn-info btn-raised btn-sm" value="Regresar al Inicio"></input></a>
+
+												
+
+		</div></center>
+
+		<footer class="full-box dashboard-Navbar">
+
+			<p>Plataforma desarrollada por los estudiantes: Jesus David Martinez y Elias David Zabaleta. Directora: Yasmin Moya Villa.</p>
+	
+		</footer>
+
+	</section>
+
+
+
+	<!--====== Scripts -->
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/jquery-3.1.1.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/sweetalert2.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/bootstrap.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/material.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/ripples.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/jquery.mCustomScrollbar.concat.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/main.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/controladorDocente.js"></script>
+
+	<script>
+
+		$.material.init();
+
+	</script>
+
+</body>
+
+</html>

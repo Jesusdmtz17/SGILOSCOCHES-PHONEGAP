@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+	<title>SGI HIC LOS COCHES</title>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<link rel="stylesheet" href="../css/main.css">
+
+</head>
+
+<body id="home.html">
+
+	<!-- SideBar -->
+
+	<section class="full-box cover dashboard-sideBar">
+
+		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard"></div>
+
+		<div class="full-box dashboard-sideBar-ct">
+
+			<!--SideBar Title -->
+
+			<div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
+
+				SGI HIC LOS COCHES <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
+
+			</div>
+
+			<!-- SideBar User info -->
+
+			<div class="full-box dashboard-sideBar-UserInfo">
+
+				<figure class="full-box">
+
+					<img src="../assets/img/avatar.jpg" alt="UserIcon">
+
+					<figcaption id="user" class="text-center text-titles"></figcaption>
+
+				</figure>
+
+				<ul class="full-box list-unstyled text-center">
+
+					<li>
+
+						<a href="#!">
+
+							<i class="zmdi zmdi-settings"></i>
+
+						</a>
+
+					</li>
+
+					<li>
+
+						<a href="#!" class="btn-exit-system">
+
+							<i class="zmdi zmdi-power"></i>
+
+						</a>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+			<!-- SideBar Menu -->
+
+			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
+
+				<li>
+
+					<a href="home.html">
+
+						<i class="zmdi zmdi-home zmdi-hc-fw"></i> Inicio
+
+					</a>
+
+				</li>
+
+				<li>
+
+					<a href="#!" class="btn-sideBar-SubMenu">
+
+						<i class="zmdi zmdi-male-female"></i><i class="zmdi zmdi-mood"></i> Administración Psicosocial <i class="zmdi zmdi-caret-down pull-right"></i>
+
+					</a>
+
+					<ul class="list-unstyled full-box">
+
+						<li>
+
+							<a id="seguimiento" href="seguimiento.html"><i class="zmdi zmdi-library"></i> Seguimiento Psicosocial</a>
+
+						</li>
+
+						
+
+						<li id="agendarCita">
+
+							<a id="agendar" href="citas.html"><i class="zmdi zmdi-open-in-new "></i> Agendar Cita</a>
+
+						</li>
+
+						
+
+						<li>
+
+							<a id="atender" href="tablaCitas.html"><i class="zmdi zmdi-assignment-check"></i> Atender Cita</a>
+
+						</li>
+
+						
+
+						<li>
+
+							<a id="atendidas" href="tablaCitas.html"><i class="zmdi zmdi-assignment"></i> Ver Citas Atendidas</a>
+
+						</li>
+
+						
+
+						<li>
+
+							<a id="alertas" href="alertas.html"><i class="zmdi zmdi-assignment-alert"></i> Ver Alertas Generadas</a>
+
+						</li>
+
+						
+
+						
+
+					</ul>
+
+				</li>
+
+				<li>
+
+					<a href="#!" class="btn-sideBar-SubMenu">
+
+						<i class="zmdi zmdi-mood"></i> Administrar Información Beneficiarios <i class="zmdi zmdi-caret-down pull-right"></i>
+
+					</a>
+
+					<ul class="list-unstyled full-box">
+
+						
+
+						<li>
+
+							<a href="tablaBeneficiarios.html"><i class="zmdi zmdi-search"></i><i class="zmdi zmdi-mood"></i> Consultar Beneficiarios</a>
+
+						</li>
+
+						<li>
+
+							<a href="beneficiarios.html"><i class="zmdi zmdi-account-add"></i> Agregar Beneficiario</a>
+
+						</li>
+
+					</ul>
+
+				</li>
+
+				<li>
+
+					<a href="#!" class="btn-sideBar-SubMenu">
+
+						<i class="zmdi zmdi-account-circle"></i> Administrar Perfiles del Hogar <i class="zmdi zmdi-caret-down pull-right"></i>
+
+					</a>
+
+					<ul class="list-unstyled full-box">
+
+						<li>
+
+							<a href="tablaPerfiles.html" onclick="MostrarDocente()" id="docente"><i class="zmdi zmdi-accounts-alt"></i> Docente</a>
+
+						</li>
+
+						
+
+						<li>
+
+							<a href="tablaPerfiles.html" onclick="MostrarNutricionDesarrollo()" id="nutricion"><i class="zmdi zmdi-accounts-alt"></i> Nutrición y Desarrollo</a>
+
+						</li>
+
+						
+
+						<li>
+
+							<a href="tablaPerfiles.html" onclick="MostrarTrabajoSocial()" id="trabajoSocial"><i class="zmdi zmdi-accounts-alt"></i> Trabajo Social</a>
+
+						</li>
+
+						
+
+						<li>
+
+							<a href="tablaPerfiles.html" onclick="MostrarDirector()" id="rectoria" ><i class="zmdi zmdi-account"></i> Director</a>
+
+						</li>
+
+					</ul>
+
+				</li>
+
+			</ul>
+
+		</div>
+
+	</section>
+
+
+
+	<!-- Content page-->
+
+	<section class="full-box dashboard-contentPage">
+
+		<!-- NavBar -->
+
+		<nav class="full-box dashboard-Navbar">
+
+			<ul class="full-box list-unstyled text-right">
+
+				<li class="pull-left">
+
+					<a href="#!" class="btn-menu-dashboard"><i class="zmdi zmdi-more-vert"></i></a>
+
+				</li>
+
+				<li><!-- aqui se va a enlazar el manual del usuario -->
+
+					<a href="#!" class="btn-modal-help">
+
+						<i class="zmdi zmdi-help-outline"></i>
+
+					</a>
+
+				</li>
+
+			</ul>
+
+		</nav>
+
+		<!-- Content page -->
+
+		<div class="container-fluid"><!-- Aqui debe decir quien fué el que ingresó -->
+
+			<div class="page-header">
+
+				<div class="row">
+
+					<div class="col-lg-4 col-md-4 col-sm-4">
+
+				<img src="../assets/img/logotipo-oficial-unicartagena.png" style="width: 75%">
+
+			</div>
+
+				<div class="col-lg-4 col-md-4 col-sm-4">
+
+			  <h3 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Trabajo <small>Social</small></h3>
+
+			</div>
+
+			<div class="col-lg-4 col-md-4 col-sm-4">
+
+			  <h4 class="text-sub-titles text-izquierda"> <small id="ingreso"> </small></h4>
+
+			</div>
+
+			</div>
+ 		</div>
+
+		</div>
+
+		<div class="full-box text-center" style="padding: 30px 10px;"><!-- espacio para accesos directos -->
+
+			<a href="tablaPerfiles.html"><article class="full-box tile"><!-- para listar perfiles -->
+
+				<div class="full-box tile-title text-center text-titles text-uppercase">
+
+					Perfiles
+
+				</div>
+
+				<div class="full-box tile-icon text-center">
+
+					<i class="zmdi zmdi-account"></i>
+
+				</div>
+
+				<div class="full-box tile-number text-titles">
+
+					<p id="Nperfiles" class="full-box"></p>
+
+					<small>Registrados</small>
+
+				</div>
+
+			</article></a>
+
+			<a href="tablaBeneficiarios.html"><article class="full-box tile"><!-- para listar beneficiarios -->
+
+				<div class="full-box tile-title text-center text-titles text-uppercase">
+
+					Beneficiarios
+
+				</div>
+
+				<div class="full-box tile-icon text-center">
+
+					<i class="zmdi zmdi-mood"></i>
+
+				</div>
+
+				<div class="full-box tile-number text-titles">
+
+					<p id="Nbeneficiarios" class="full-box"></p>
+
+					<small>Registrados</small>
+
+				</div>
+
+			</article></a>
+
+			<a href="tablaCitas.html"><article class="full-box tile"><!-- para listar citas pendiente -->
+
+				<div class="full-box tile-title text-center text-titles text-uppercase">
+
+					Citas Pendiente 
+
+				</div>
+
+				<div class="full-box tile-icon text-center">
+
+					<i class="zmdi zmdi-assignment"></i>
+
+				</div>
+
+				<div class="full-box tile-number text-titles">
+
+					<p id="Ncitas" class="full-box"></p>
+
+					<small>Asignadas</small>
+
+				</div>
+
+			</article></a>
+
+			<a href="alertas.html"><article class="full-box tile"><!-- para listar Alertas Generadas -->
+
+				<div class="full-box tile-title text-center text-titles text-uppercase">
+
+					Alertas Generadas
+
+				</div>
+
+				<div class="full-box tile-icon text-center">
+
+					<i class="zmdi zmdi-assignment-alert"></i>
+
+				</div>
+
+				<div class="full-box tile-number text-titles">
+
+					<p id="Nalertas" class="full-box"></p>
+
+					<small>Pendientes</small>
+
+				</div>
+
+			</article></a>
+
+		</div>
+
+		<div class="container-fluid"><!--Espacio para listar las citas del dia-->
+
+			<div class="page-header">
+
+			  <h1 class="text-titles">Citas Progradas<small> Para Hoy</small></h1>
+
+			</div>
+
+			<section id="cd-timeline" class="cd-container">
+
+			
+
+                <!-- aqui se escribe dinamicamente las citas del dia -->
+
+                
+
+            </section>
+
+
+
+
+
+		</div>
+		
+		<footer class="full-box dashboard-Navbar">
+
+		<p>Plataforma desarrollada por los estudiantes: Jesus David Martinez y Elias David Zabaleta. Directora: Yasmin Moya Villa.</p>
+
+		</footer>
+
+
+	</section>
+
+
+
+	<!--====== Scripts -->
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/jquery-3.1.1.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/sweetalert2.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/bootstrap.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/material.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/ripples.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/jquery.mCustomScrollbar.concat.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/main.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/controladorTrabajoSocial.js"></script>
+
+	<script>
+
+		$.material.init();
+
+	</script>
+
+</body>
+
+</html>

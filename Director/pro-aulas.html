@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+	<title>SGI HIC LOS COCHES</title>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<link rel="stylesheet" href="../css/main.css">
+
+	
+
+</head>
+
+<body id="pro-aulas.html">
+
+	<!-- SideBar -->
+
+	<section class="full-box cover dashboard-sideBar">
+
+		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard"></div>
+
+		<div class="full-box dashboard-sideBar-ct">
+
+			<!--SideBar Title -->
+
+			<div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
+
+				SGI HIC LOS COCHES <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
+
+			</div>
+
+			<!-- SideBar User info -->
+
+			<div class="full-box dashboard-sideBar-UserInfo">
+
+				<figure class="full-box">
+
+					<img src="../assets/img/avatar.jpg" alt="UserIcon">
+
+					<figcaption id="user" class="text-center text-titles"></figcaption>
+
+				</figure>
+
+				<ul class="full-box list-unstyled text-center">
+
+					<li>
+
+						<a href="#!">
+
+							<i class="zmdi zmdi-settings"></i>
+
+						</a>
+
+					</li>
+
+					<li>
+
+						<a href="#!" class="btn-exit-system">
+
+							<i class="zmdi zmdi-power"></i>
+
+						</a>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+			<!-- SideBar Menu -->
+
+			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
+
+				<li>
+
+					<a href="home.html">
+
+						<i class="zmdi zmdi-home zmdi-hc-fw"></i> Inicio
+
+					</a>
+
+				</li>
+
+				<li>
+
+					<a href="#!" class="btn-sideBar-SubMenu">
+
+						<i class="zmdi zmdi-library zmdi-hc-fw"></i> Gestionar Aulas del Hogar Infantil <i class="zmdi zmdi-caret-down pull-right"></i>
+
+					</a>
+
+					<ul class="list-unstyled full-box">
+
+						
+
+						<li>
+
+							<a id="TodasAulas" href="#"><i class="zmdi zmdi-library"></i> Ver Todas las Aulas del Hogar</a>
+
+						</li>
+
+						
+
+						<li>
+
+							<a id="NuevaAula" href="#"><i class="zmdi zmdi-plus-square"></i> Registrar Nueva Aula</a>
+
+						</li>
+
+						
+
+						<li>
+
+							<a id="Beneficiarios" href="#"><i class="zmdi zmdi-mood"></i> Ver Todos los Beneficiarios del Hogar</a>
+
+						</li>
+
+						
+
+						<li>
+
+							<a id="TodoProyectos" href="#"><i class="zmdi zmdi-assignment"></i> Ver Todos los Proyectos de Aulas</a>
+
+						</li>
+
+						
+
+						<li>
+
+							<a id="ProyectosPendiente" href="#"><i class="zmdi zmdi-assignment-alert"></i> Ver Todos los Proyectos de Aulas Pendientes de Aprobación</a>
+
+						</li>
+
+					</ul>
+
+				</li>
+
+				<li>
+
+					<a href="#!" class="btn-sideBar-SubMenu">
+
+						<i class="zmdi zmdi-case zmdi-hc-fw"></i> Patrimonio del Hogar Infantil<i class="zmdi zmdi-caret-down pull-right"></i>
+
+					</a>
+
+					<ul class="list-unstyled full-box">
+
+						<li>
+
+							<a id="TodosActivos" href="#"><i class="zmdi zmdi-long-arrow-up zmdi-hc-fw"></i> Ver Todos Los Activos del Hogar</a>
+
+						</li>
+
+						<li>
+
+							<a id="NuevoActivo" href="#"><i class="zmdi zmdi-plus-square zmdi-hc-fw"></i> Agregar Activo</a>
+
+						</li>
+
+						<li>
+
+							<a id="TodosPasivos" href="#"><i class="zmdi zmdi-long-arrow-down zmdi-hc-fw"></i> Ver Todos Los Pasivos del Hogar</a>
+
+						</li>
+
+						<li>
+
+							<a id="NuevoPasivo" href="#"><i class="zmdi zmdi-plus-square zmdi-hc-fw"></i> Agregar Pasivo</a>
+
+						</li>
+
+						
+
+					</ul>
+
+				</li>
+
+			</ul>
+
+		</div>
+
+	</section>
+
+	
+
+	
+
+	<!-- Content page-->
+
+	<section class="full-box dashboard-contentPage">
+
+		<!-- NavBar -->
+
+		<nav class="full-box dashboard-Navbar">
+
+			<ul class="full-box list-unstyled text-right">
+
+				<li class="pull-left">
+
+					<a href="#!" class="btn-menu-dashboard"><i class="zmdi zmdi-more-vert"></i></a>
+
+				</li>
+
+				<li><!-- aqui se va a enlazar el manual del usuario -->
+
+					<a href="#!" class="btn-modal-help">
+
+						<i class="zmdi zmdi-help-outline"></i>
+
+					</a>
+
+				</li>
+
+			</ul>
+
+		</nav>
+
+		<!-- Content page -->
+
+		<div class="container-fluid">
+
+			<div class="page-header">
+
+			  <h1 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Docente </h1>
+
+			</div>
+
+			<p class="lead">En esta pagina se puede gestionar la información educativa de los beneficiarios del hogar infantil, además de						registrar propuestas de proyectos de aula o revisar los aprobados, para mayor información presiona el boton de ayuda 
+
+							<i class="zmdi zmdi-help-outline"></i> en la parte superior de la pantalla</p>
+
+		</div>
+
+		<div class="container-fluid">
+
+			<div class="row">
+
+				<div class="col-xs-12">
+
+					<ul class="nav nav-tabs" style="margin-bottom: 15px;">
+
+					  	<li id="liList" class="active"><a href="#list" data-toggle="tab">Listar Todos Los Proyectos de Aula</a></li>
+
+						</ul>
+
+					<div id="myTabContent" class="tab-content">
+
+						<div class="tab-pane fade" id="detalle">
+
+							<div id="proyecto" class="container-fluid">
+
+							<div class="row">
+
+							
+
+							<h2 id="nombreProyect" class="text-titles">  </h2>
+
+									<div class="container-fluid">
+
+									<p id="nombreAula" class="text-titles"></p>
+
+									<p id="justificacion" class="text-titles"></p>
+
+									<p id="metodologia" class="text-titles"></p>
+
+									<p id="marco-teorico" class="text-titles"></p>
+
+									<p id="fechas" class="text-titles"></p>
+
+									<p id="aprobacion" class="text-titles"></p>
+
+									</div>
+
+									
+
+									<div class="col-xs-12 col-md-10 col-md-offset-1">
+
+										
+
+											<div class="form-group">
+
+										        <label class="group-control">Indicador de Logro</label>
+
+										        <select class="form-control" id="indicador">
+
+										          <option value="0" disabled selected>Seleccione una Dimensión</option>
+
+												  <option id="i1" ></option>
+
+												  <option id="i2" ></option>
+
+												  <option id="i3" ></option>
+
+												  <option id="i4" ></option>
+
+												  <option id="i5" ></option>
+
+										          
+
+										        </select>
+
+										    </div>
+
+										
+
+									</div>
+
+									
+
+									
+
+								</div>
+
+								
+
+								<div class="container-fluid">
+
+									<h3 id="nombreIndicador" class="text-titles"></h3>
+
+									<p id="descripcionIndicador" class="text-titles"></p>
+
+									</div>
+
+							</div>
+
+							<br><div id="apruebaorechazo"></div>
+
+							<br><center><div class="form-group">
+
+												<a id="backproyects" href="#list" data-toggle="tab"><input type="button" id="regresohome"class="btn btn-info btn-raised btn-sm" value="Regresar a los Proyectos"></input></a>
+
+												
+
+											</div></center>
+
+							
+
+						</div>
+
+					  	<div class="tab-pane fade active in" id="list">
+
+							<div class="container-fluid"><!--Espacio para listar los proyectos de aula-->
+
+			<div class="page-header">
+
+			  <h2 class="text-titles">Proyectos de Aula</h1>
+
+			</div>
+
+			
+
+			<div class="form-group" style =" width:50%;">
+
+										        <label class="group-control">Filtrar por Aprobación</label>
+
+										        <select class="form-control" id="filtroAprobacion">
+
+										          <option value="todos" selected>Todos los Proyectos</option>
+
+												  <option value="pendiente">Pendientes de Aprobación</option>
+
+												  <option value="aprobado">Proyectos Aprobados</option>
+
+												  <option value="rechazado">Proyectos Rechazados</option>
+
+												  
+
+										        </select>
+
+										    </div>
+
+			
+
+			<section id="cd-timeline" class="cd-container">
+
+			
+
+                <!-- aqui se escribe dinamicamente los proyectos de aula -->
+
+                
+
+            </section>
+
+
+
+
+
+		</div>
+
+							<br><center><div class="form-group">
+
+												<a href="home.html"><input type="button" id="regresohome"class="btn btn-info btn-raised btn-sm" value="Regresar al Inicio"></input></a>
+
+												
+
+											</div></center>
+
+					  	</div>
+
+					</div>
+
+			</div>
+
+		</div>
+
+		
+		<footer class="full-box dashboard-Navbar">
+
+			<p>Plataforma desarrollada por los estudiantes: Jesus David Martinez y Elias David Zabaleta. Directora: Yasmin Moya Villa.</p>
+	
+		</footer>
+		
+
+	</section>
+
+
+
+	<!--====== Scripts -->
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/jquery-3.1.1.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/sweetalert2.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/bootstrap.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/material.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/ripples.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/jquery.mCustomScrollbar.concat.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/main.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/controladorDireccion.js"></script>
+
+	<script>
+
+		$.material.init();
+
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+	<title>Nutricion y Desarrollo</title>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<link rel="stylesheet" href="../css/main.css">
+
+</head>
+
+<body id="home.html">
+
+	<!-- SideBar -->
+
+	<section class="full-box cover dashboard-sideBar">
+
+		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard"></div>
+
+		<div class="full-box dashboard-sideBar-ct">
+
+			<!--SideBar Title -->
+
+			<div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
+
+				HIC Los Coches<i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
+
+			</div>
+
+			<!-- SideBar User info -->
+
+			<div class="full-box dashboard-sideBar-UserInfo">
+
+				<figure class="full-box">
+
+					<img src="../assets/img/avatar.jpg" alt="UserIcon">
+
+					<figcaption id="user" class="text-center text-titles"></figcaption>
+
+				</figure>
+
+				<ul class="full-box list-unstyled text-center">
+
+					<li>
+
+						<a href="#!">
+
+							<i class="zmdi zmdi-settings"></i>
+
+						</a>
+
+					</li>
+
+					<li>
+
+						<a href="#!" class="btn-exit-system">
+
+							<i class="zmdi zmdi-power"></i>
+
+						</a>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+			<!-- SideBar Menu -->
+
+			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
+
+				<li>
+
+					<a href="home.html">
+
+						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Inicio
+
+					</a>
+
+				</li>
+
+				<li>
+
+					<a href="#!" class="btn-sideBar-SubMenu">
+
+						<i class="zmdi zmdi-case zmdi-hc-fw"></i> Citas <i class="zmdi zmdi-caret-down pull-right"></i>
+
+					</a>
+
+					<ul class="list-unstyled full-box">
+
+						<li>
+
+							<a href="citas.html"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> Crear Cita</a>
+
+						</li>
+
+						
+
+					</ul>
+
+				</li>
+
+				<li>
+
+					<a href="#!" class="btn-sideBar-SubMenu">
+
+						<i class="zmdi zmdi-account-add zmdi-hc-fw"></i> Valoraciones Medicas <i class="zmdi zmdi-caret-down pull-right"></i>
+
+					</a>
+
+					<ul class="list-unstyled full-box">
+
+						<li>
+
+							<a href="agregarValoracionMedica.html"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Agregar Valoracion Medica</a>
+
+						</li>
+
+					</ul>
+
+				</li>
+
+			</ul>
+
+		</div>
+
+	</section>
+
+
+
+
+
+	<!-- Content page-->
+
+	<section class="full-box dashboard-contentPage">
+
+		<!-- NavBar -->
+
+		<nav class="full-box dashboard-Navbar">
+
+			<ul class="full-box list-unstyled text-right">
+
+				<li class="pull-left">
+
+					<a href="#!" class="btn-menu-dashboard"><i class="zmdi zmdi-more-vert"></i></a>
+
+				</li>
+
+				
+
+				<li><!-- aqui se va a enlazar el manual del usuario -->
+
+					<a href="#!" class="btn-modal-help">
+
+						<i class="zmdi zmdi-help-outline"></i>
+
+					</a>
+
+				</li>
+
+			</ul>
+
+		</nav>
+
+		<!-- Content page -->
+
+		<div class="container-fluid"><!-- Aqui debe decir quien fué el que ingresó -->
+
+			<div class="page-header">
+
+
+
+			  <div class="row">
+
+					<div class="col-lg-4 col-md-4 col-sm-4">
+
+				<img src="../assets/img/logotipo-oficial-unicartagena.png" style="width: 75%">
+
+			</div>
+
+				<div class="col-lg-4 col-md-4 col-sm-4">
+
+			  <h3 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Nutricion y Desarrollo</h3>
+
+			</div>
+
+			<div class="col-lg-4 col-md-4 col-sm-4">
+
+			  <h4 class="text-sub-titles text-izquierda"> <small id="ingreso"> </small></h4>
+
+			</div>
+
+			</div>
+
+			</div>
+
+			</div>
+
+		</div>
+
+		<div class="full-box text-center" style="padding: 30px 10px;"><!-- espacio para accesos directos -->
+
+			<article class="full-box tile"><!-- para listar perfiles -->
+
+				<a href="citas.html"><div class="full-box tile-title text-center text-titles text-uppercase">
+
+					Citas
+
+				</div>
+
+				<div class="full-box tile-icon text-center">
+
+					<i class="zmdi zmdi-account"></i>
+
+				</div>
+
+				<div class="full-box tile-number text-titles">
+
+					<p id= "Ncitas" class="full-box"></p>
+
+					<small>Registrados</small>
+
+				</div></a>
+
+			</article>
+
+			<a id="VMEDICA"><article class="full-box tile"><!-- para listar beneficiarios -->
+
+				<div class="full-box tile-title text-center text-titles text-uppercase">
+
+					Valoraciones Medicas
+
+				</div>
+
+				<div class="full-box tile-icon text-center">
+
+					<i class="zmdi zmdi-male-alt"></i>
+
+				</div>
+
+				<div class="full-box tile-number text-titles">
+
+					<p id="NvMedica" class="full-box"></p>
+
+					<small>Registrado</small>
+
+				</div>
+
+			</article></a>
+
+			<article class="full-box tile"><!-- para listar citas pendiente -->
+
+				<a href="alertas.html"><div class="full-box tile-title text-center text-titles text-uppercase">
+
+					Alertas
+
+				</div>
+
+				<div class="full-box tile-icon text-center">
+
+					<i class="zmdi zmdi-face"></i>
+
+				</div>
+
+				<div class="full-box tile-number text-titles">
+
+					<p id="NAlerta" class="full-box"></p>
+
+					<small>Register</small>
+
+				</div></a>
+
+			</article>
+
+			
+
+		</div>
+
+		<div class="container-fluid"><!--Espacio para listar las citas del dia-->
+
+			<div class="page-header">
+
+			  <h1 class="text-titles">Citas Progradas<small> Para Hoy</small></h1>
+
+			</div>
+
+		</div>
+
+			<section id="cd-timeline" class="cd-container">
+
+			
+
+               
+
+                
+				<footer class="full-box dashboard-Navbar">
+
+					<p>Plataforma desarrollada por los estudiantes: Jesus David Martinez y Elias David Zabaleta. Directora: Yasmin Moya Villa.</p>
+			
+				</footer>
+                
+
+            </section>
+
+
+
+
+
+	
+
+
+
+	<!-- Dialog help -->
+
+	
+
+	<!--====== Scripts -->
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/jquery-3.1.1.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/sweetalert2.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/bootstrap.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/material.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/ripples.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/jquery.mCustomScrollbar.concat.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/main.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/controladorNutricionyDesarrollo.js"></script>
+
+
+
+	<script>
+
+		$.material.init();
+
+	</script>
+
+</body>
+
+</html>

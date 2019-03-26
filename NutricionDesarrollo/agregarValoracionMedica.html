@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+	<title>Nutricion y Desarrollo</title>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<link rel="stylesheet" href="../css/main.css">
+
+</head>
+
+<body onload="MostrarValoracionMedica()">
+
+	<!-- SideBar -->
+
+	<section class="full-box cover dashboard-sideBar">
+
+		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard"></div>
+
+		<div class="full-box dashboard-sideBar-ct">
+
+			<!--SideBar Title -->
+
+			<div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
+
+				HIC Los Coches<i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
+
+			</div>
+
+			<!-- SideBar User info -->
+
+			<div class="full-box dashboard-sideBar-UserInfo">
+
+				<figure class="full-box">
+
+					<img src="../assets/img/avatar.jpg" alt="UserIcon">
+
+					<figcaption id="user" class="text-center text-titles">User Name</figcaption>
+
+				</figure>
+
+				<ul class="full-box list-unstyled text-center">
+
+					<li>
+
+						<a href="#!">
+
+							<i class="zmdi zmdi-settings"></i>
+
+						</a>
+
+					</li>
+
+					<li>
+
+						<a href="#!" class="btn-exit-system">
+
+							<i class="zmdi zmdi-power"></i>
+
+						</a>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+			<!-- SideBar Menu -->
+
+			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
+
+				<li>
+
+					<a href="home.html">
+
+						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Inicio
+
+					</a>
+
+				</li>
+
+				<li>
+
+					<a href="#!" class="btn-sideBar-SubMenu">
+
+						<i class="zmdi zmdi-case zmdi-hc-fw"></i> Citas <i class="zmdi zmdi-caret-down pull-right"></i>
+
+					</a>
+
+					<ul class="list-unstyled full-box">
+
+						<li>
+
+							<a href="citas.html"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> Crear Cita</a>
+
+						</li>
+
+						
+
+					</ul>
+
+				</li>
+
+				<li>
+
+					<a href="#!" class="btn-sideBar-SubMenu">
+
+						<i class="zmdi zmdi-account-add zmdi-hc-fw"></i> Valoraciones Medicas <i class="zmdi zmdi-caret-down pull-right"></i>
+
+					</a>
+
+					<ul class="list-unstyled full-box">
+
+						<li>
+
+							<a href="agregarValoracionMedica.html"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Agregar Valoracion Medica</a>
+
+						</li>
+
+					</ul>
+
+				</li>
+
+			</ul>
+
+		</div>
+
+	</section>
+
+
+
+	<!-- Content page-->
+
+	<section class="full-box dashboard-contentPage">
+
+		<!-- NavBar -->
+
+		<nav class="full-box dashboard-Navbar">
+
+			<ul class="full-box list-unstyled text-right">
+
+				<li class="pull-left">
+
+					<a href="#!" class="btn-menu-dashboard"><i class="zmdi zmdi-more-vert"></i></a>
+
+				</li>
+
+				
+
+				<li><!-- aqui se va a enlazar el manual del usuario -->
+
+					<a href="#!" class="btn-modal-help">
+
+						<i class="zmdi zmdi-help-outline"></i>
+
+					</a>
+
+				</li>
+
+			</ul>
+
+		</nav>
+
+		<!-- Content page -->
+
+		<div class="container-fluid">
+
+			<div class="page-header">
+
+				<div class="row">
+
+					<div class="col-lg-6 col-md-6 col-sm-6">
+
+				<img src="../assets/img/logotipo-oficial-unicartagena.png" style="width: 75%">
+
+			</div>
+
+			<div class="col-lg-6 col-md-6 col-sm-6">
+
+			  <h3 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Valoraciones <small>Medicas</small></h3>
+
+			</div>
+
+		</div>
+
+			</div>
+
+			<p class="lead">En ésta pagina se pueden registrar perfiles de usuario nuevos o gestionar la información de los perfiles existentes en el sistema</p>
+
+		</div>
+
+		<div class="container-fluid">
+
+			<div class="row">
+
+				<div class="col-xs-12">
+
+					<ul class="nav nav-tabs" style="margin-bottom: 15px;">
+
+					  	<li><a href="#new" data-toggle="tab">Registro Valoracion Medica</a></li>
+
+					  	<li class="active"><a href="#list" data-toggle="tab">Listar Todoas las valoraciones medicas</a></li>
+
+					</ul>
+
+					<div id="myTabContent" class="tab-content">
+
+						<div class="tab-pane fade" id="new">
+
+							<div class="container-fluid">
+
+								<div class="row">
+
+									<div class="col-xs-12 col-md-10 col-md-offset-1">
+
+									    <form id="registro_vMedica">
+
+									    	<div class="form-group label-floating">
+
+											  <label class="control-label">id valoracion medica</label>
+
+											  <input maxlength="40" class="form-control" type="text" id="id_vMedica" required>
+
+											</div>
+
+											<div class="form-group label-floating">
+
+											  <label class="control-label">Id antropometrica</label>
+
+											  <input maxlength="40" class="form-control" type="text" id="id_antropometrica" required>
+
+											</div>
+
+											<div class="form-group label-floating">
+
+											  <label class="control-label">Identificacion Beneficiario</label>
+
+											  <input maxlength="40" class="form-control" type="text" id="id_beneficiario" required>
+
+											</div>
+
+											<div class="form-group label-floating">
+
+											  <label class="control-label">Peso</label>
+
+											  <input maxlength="40" class="form-control" type="text" id="peso" required>
+
+											</div>
+
+											<div class="form-group label-floating">
+
+											  <label class="control-label">Talla</label>
+
+											  <input maxlength="40" class="form-control" type="text" id="talla" required>
+
+											</div>
+
+											<div class="form-group label-floating">
+
+											  <label class="control-label">Soporte</label>
+
+											  <input maxlength="40" class="form-control" type="text" id="Soporte" required>
+
+											</div>									
+
+										    <center><input type="submit" class="btn btn-info btn-raised btn-sm" value="Registrar"></input></center> 
+
+									    </form>
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					  	<div class="tab-pane fade active in" id="list">
+
+					  		<div class="container-fluid">
+
+								<div class="row">
+
+									<div class="col-xs-12 col-md-10 col-md-offset-1">
+
+										
+
+											<div class="form-group label-floating">
+
+												<label class="control-label">Registro a buscar</label>
+
+												<input id="searchTerm" onkeyup="buscarEnTabla()" maxlength="40" class="form-control" type="text" autocomplete="off">
+
+											</div>
+
+										
+
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="table-responsive">
+
+								<table class="table table-hover text-center" id=tabla>
+
+									<thead>
+
+										<tr>
+
+											<th class="text-center">Id del Beneficiario</th>
+
+											<th class="text-center">Nombres</th>
+
+											<th class="text-center">Apellidos</th>
+
+											<th class="text-center">Fecha de Nacimiento</th>
+
+											<th class="text-center">Talla</th>
+
+											<th class="text-center">Peso</th>
+
+											<th class="text-center">Actualizar</th>
+
+											<th class="text-center">Eliminar</th>
+
+										</tr>
+
+									</thead>
+
+									<tbody id = "tbody" name="vMedica">
+
+										<!-- El contenido se llena dinamicamente -->									
+
+									</tbody>
+
+								</table>
+
+							</div>
+
+					  	</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<footer class="full-box dashboard-Navbar">
+
+			<p>Plataforma desarrollada por los estudiantes: Jesus David Martinez y Elias David Zabaleta. Directora: Yasmin Moya Villa.</p>
+	
+		</footer>
+
+	</section>
+
+
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/jquery-3.1.1.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/sweetalert2.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/bootstrap.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/material.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/ripples.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/jquery.mCustomScrollbar.concat.min.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/librerias/main.js"></script>
+
+	<script src="https://sgihicloscoches.000webhostapp.com/DesarrolloTesis/Controlador/controladorNutricionyDesarrollo.js"></script>
+
+	<script>
+
+		$.material.init();
+
+	</script>
+
+</body>
+
+</html>
